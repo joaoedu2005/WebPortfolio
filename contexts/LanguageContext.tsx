@@ -8,6 +8,7 @@ interface Translations {
     specialties: string;
     about: string;
     projects: string;
+    plans: string;
     contact: string;
   };
   hero: {
@@ -50,7 +51,8 @@ interface Translations {
     introTitle: string;
     introText: string;
     plans: {
-        slice: {
+        start: {
+            tag: string;
             title: string;
             subtitle: string;
             price: string;
@@ -58,7 +60,26 @@ interface Translations {
             button: string;
             message: string;
         };
-        cake: {
+        combo: {
+            tag: string;
+            title: string;
+            subtitle: string;
+            price: string;
+            features: string[];
+            button: string;
+            message: string;
+        };
+        scale: {
+            tag: string;
+            title: string;
+            subtitle: string;
+            price: string;
+            features: string[];
+            button: string;
+            message: string;
+        };
+        custom: {
+            tag: string;
             title: string;
             subtitle: string;
             price: string;
@@ -75,7 +96,7 @@ interface Translations {
 
 const translationsData: Record<Language, Translations> = {
   PT: {
-    nav: { home: "Início", specialties: "Especialidades", about: "Sobre", projects: "Projetos", contact: "Contato" },
+    nav: { home: "Início", specialties: "Especialidades", about: "Sobre", projects: "Projetos", plans: "Planos", contact: "Contato" },
     hero: {
       title: "Design Único.",
       subtitle: "Resultados Reais.",
@@ -103,36 +124,62 @@ const translationsData: Record<Language, Translations> = {
     portfolio: {
       prefix: "MEU",
       heading: "PORTFÓLIO",
-      categories: { solar: "Landing Page | Energia Solar", ecommerce: "E-commerce", health: "Landing Page | Saúde", automation: "Automação" }
+      categories: { solar: "Landing Page | Energia Solar", ecommerce: "E-commerce", health: "Saúde", automation: "Automação" }
     },
     contact: {
       ctaTitle: "PARE DE PERDER",
       ctaSubtitle: "DINHEIRO HOJE.",
       introTitle: "O Custo da Invisibilidade",
-      introText: "Você sabe que seu produto é bom, mas seu cliente não te acha. Agências cobram fortunas (R$ 2.000+) e levam 30 dias para entregar o básico. Eu quebro esse padrão: entrego qualidade de agência, com velocidade recorde e preço justo.",
+      introText: "Você sabe que seu produto é bom, mas seu cliente não te acha. Agências cobram fortunas e levam 30 dias para entregar o básico. Aqui você tem velocidade, qualidade e opções que cabem no seu momento.",
       plans: {
-        slice: {
-            title: "PRESENÇA DIGITAL (Start)",
+        start: {
+            tag: "ENTRADA",
+            title: "LANDING PAGE",
             subtitle: "Saia do Amadorismo",
             price: "R$ 697,90",
-            features: ["Chega de perder venda por não ter site", "Preço 3x menor que agências tradicionais", "Entrega Relâmpago (Pronta para uso)", "Design que passa credibilidade imediata"],
-            button: "QUERO VENDER AGORA",
-            message: "Olá, cansei de perder vendas. Quero minha Landing Page de R$ 697,90!"
+            features: ["Landing Page de Alta Conversão", "Design focado em Vendas", "Entrega Rápida", "Ideal para validar oferta"],
+            button: "QUERO VENDER",
+            message: "Olá, quero a Landing Page de R$ 697,90!"
         },
-        cake: {
-            title: "MÁQUINA DE VENDAS (Scale)",
-            subtitle: "Ecossistema Completo",
+        combo: {
+            tag: "MELHOR CUSTO-BENEFÍCIO",
+            title: "BRANDING + WEB",
+            subtitle: "Profissionalize sua Marca",
+            price: "A partir de R$ 897,90",
+            features: ["Tudo do plano anterior", "Criação de Identidade Visual", "Logo e Manual da Marca", "Design Coerente e Forte"],
+            button: "QUERO O COMBO",
+            message: "Olá, me interessei pelo Combo de Branding + Landing Page!"
+        },
+        custom: {
+            tag: "FLEXÍVEL",
+            title: "PERSONALIZADO",
+            subtitle: "Do Seu Jeito",
+            price: "A combinar",
+            features: [
+              "Escolha os serviços a seu gosto",
+              "Criação de Landing Page (Página na Web)",
+              "Criação de Identidade Visual (ou Rebranding)",
+              "Tráfego Pago (Aumentar sua visibilidade e seus clientes)",
+              "Chatbot com IA (Automatize seu Whatsapp ou Instagram)"
+            ],
+            button: "MONTAR PACOTE",
+            message: "Olá, gostaria de montar um pacote personalizado."
+        },
+        scale: {
+            tag: "COMPLETO",
+            title: "ECOSSISTEMA",
+            subtitle: "Dominação de Mercado",
             price: "A partir de R$ 2.499,90",
-            features: ["Identidade Visual (Sua marca forte)", "Landing Page de Alta Conversão", "Tráfego Pago (Clientes todos os dias)", "Chatbot IA (Atendimento 24h)"],
-            button: "QUERO DOMINAR O MERCADO",
-            message: "Olá, quero o pacote completo com Tráfego e Automação para escalar meu negócio!"
+            features: ["Identidade Visual Completa", "LP Premium", "Tráfego Pago (Ads)", "Chatbot com IA"],
+            button: "DOMINAR MERCADO",
+            message: "Olá, estou pronto para o Ecossistema Completo!"
         }
       }
     },
     footer: { rights: "Todos os direitos reservados." }
   },
   ES: {
-    nav: { home: "Inicio", specialties: "Especialidades", about: "Sobre Mí", projects: "Proyectos", contact: "Contacto" },
+    nav: { home: "Inicio", specialties: "Especialidades", about: "Sobre Mí", projects: "Proyectos", plans: "Planes", contact: "Contacto" },
     hero: {
       title: "Diseño Único.",
       subtitle: "Resultados Reales.",
@@ -166,30 +213,56 @@ const translationsData: Record<Language, Translations> = {
       ctaTitle: "DEJA DE PERDER",
       ctaSubtitle: "DINERO HOY.",
       introTitle: "El Costo de la Invisibilidad",
-      introText: "Sabes que tu producto es bueno, pero tu cliente no te encuentra. Las agencias cobran fortunas y tardan 30 días en entregar lo básico. Yo rompo ese patrón: entrego calidad de agencia, con velocidad récord y precio justo.",
+      introText: "Sabes que tu producto es bueno, pero tu cliente no te encuentra. Aquí tienes velocidad, calidad y opciones que se adaptan a tu momento.",
       plans: {
-        slice: {
-            title: "PRESENCIA DIGITAL (Start)",
+        start: {
+            tag: "ENTRADA",
+            title: "LANDING PAGE",
             subtitle: "Sal del Amateurismo",
             price: "R$ 697,90",
-            features: ["Deja de perder ventas por no tener sitio", "Precio 3x menor que agencias tradicionales", "Entrega Relámpago (Lista para usar)", "Diseño que transmite credibilidad inmediata"],
-            button: "QUIERO VENDER AHORA",
-            message: "Hola, me cansé de perder ventas. Quiero mi Landing Page lista."
+            features: ["Landing Page de Alta Conversión", "Diseño enfocado en Ventas", "Entrega Rápida", "Ideal para validar oferta"],
+            button: "QUIERO VENDER",
+            message: "Hola, quiero la Landing Page!"
         },
-        cake: {
-            title: "MÁQUINA DE VENTAS (Scale)",
-            subtitle: "Ecosistema Completo",
+        combo: {
+            tag: "MEJOR VALOR",
+            title: "BRANDING + WEB",
+            subtitle: "Profesionaliza tu Marca",
+            price: "Desde R$ 897,90",
+            features: ["Todo del plan anterior", "Creación de Identidad Visual", "Logo y Manual de Marca", "Diseño Coherente y Fuerte"],
+            button: "QUIERO EL COMBO",
+            message: "Hola, me interesa el Combo de Branding + Landing Page!"
+        },
+        custom: {
+            tag: "FLEXIBLE",
+            title: "PERSONALIZADO",
+            subtitle: "A Tu Manera",
+            price: "A convenir",
+            features: [
+              "Elige los servicios a tu gusto",
+              "Creación de Landing Page (Página Web)",
+              "Creación de Identidad Visual (o Rebranding)",
+              "Tráfico Pago (Aumenta tu visibilidad y clientes)",
+              "Chatbot con IA (Automatiza tu WhatsApp o Instagram)"
+            ],
+            button: "ARMAR PAQUETE",
+            message: "Hola, me gustaría armar un paquete personalizado."
+        },
+        scale: {
+            tag: "COMPLETO",
+            title: "ECOSISTEMA",
+            subtitle: "Dominación de Mercado",
             price: "Desde R$ 2.499,90",
-            features: ["Identidad Visual (Tu marca fuerte)", "Landing Page de Alta Conversión", "Tráfico Pago (Clientes todos los días)", "Chatbot IA (Atención 24h)"],
-            button: "QUIERO DOMINAR EL MERCADO",
-            message: "Hola, quiero el paquete completo con Tráfico y Automatización."
+            features: ["Identidad Visual Completa", "LP Premium", "Tráfico Pago (Ads)", "Chatbot con IA"],
+            button: "DOMINAR MERCADO",
+            message: "Hola, estoy listo para el Ecosistema Completo!"
         }
       }
     },
     footer: { rights: "Todos los derechos reservados." }
   },
   US: {
-    nav: { home: "Home", specialties: "Specialties", about: "About", projects: "Projects", contact: "Contact" },
+    nav: { home: "Home", specialties: "Specialties", about: "About", projects: "Projects", plans: "Plans", contact: "Contact" },
     hero: {
       title: "Unique Design.",
       subtitle: "Real Results.",
@@ -223,23 +296,49 @@ const translationsData: Record<Language, Translations> = {
       ctaTitle: "STOP LOSING",
       ctaSubtitle: "MONEY TODAY.",
       introTitle: "The Cost of Being Invisible",
-      introText: "You know your product is good, but customers can't find you. Agencies charge fortunes and take 30 days to deliver the basics. I break that pattern: Agency quality, record speed, fair price.",
+      introText: "You know your product is good, but customers can't find you. Here you have speed, quality, and options that fit your moment.",
       plans: {
-        slice: {
-            title: "DIGITAL PRESENCE (Start)",
+        start: {
+            tag: "ENTRY",
+            title: "LANDING PAGE",
             subtitle: "Quit Being an Amateur",
             price: "$150 USD",
-            features: ["Stop losing sales due to no website", "3x cheaper than traditional agencies", "Lightning Delivery (Ready to use)", "Design that builds instant trust"],
-            button: "I WANT TO SELL NOW",
-            message: "Hello, I'm tired of losing sales. I want my Landing Page."
+            features: ["High Conversion Landing Page", "Sales Optimized Design", "Fast Delivery", "Ideal to validate offer"],
+            button: "I WANT TO SELL",
+            message: "Hello, I want the Landing Page!"
         },
-        cake: {
-            title: "SALES MACHINE (Scale)",
-            subtitle: "Full Ecosystem",
+        combo: {
+            tag: "BEST VALUE",
+            title: "BRANDING + WEB",
+            subtitle: "Professionalize Your Brand",
+            price: "From $180 USD",
+            features: ["Everything in previous plan", "Visual Identity Creation", "Logo & Brand Manual", "Strong Coherent Design"],
+            button: "I WANT THE COMBO",
+            message: "Hello, I am interested in the Branding + Landing Page Combo!"
+        },
+        custom: {
+            tag: "FLEXIBLE",
+            title: "CUSTOM",
+            subtitle: "Your Way",
+            price: "Contact me",
+            features: [
+              "Choose services to your liking",
+              "Landing Page Creation (Web Page)",
+              "Visual Identity Creation (or Rebranding)",
+              "Paid Traffic (Increase visibility and clients)",
+              "AI Chatbot (Automate WhatsApp or Instagram)"
+            ],
+            button: "BUILD PACKAGE",
+            message: "Hello, I would like to build a custom package."
+        },
+        scale: {
+            tag: "FULL",
+            title: "ECOSYSTEM",
+            subtitle: "Market Dominance",
             price: "From $500 USD",
-            features: ["Visual Identity (Strong Brand)", "High Conversion Landing Page", "Paid Traffic (Customers every day)", "AI Chatbot (24/7 Support)"],
-            button: "I WANT MARKET DOMINANCE",
-            message: "Hello, I want the full package with Traffic and Automation."
+            features: ["Complete Visual Identity", "Premium LP", "Paid Traffic (Ads)", "AI Chatbot"],
+            button: "DOMINATE MARKET",
+            message: "Hello, I am ready for the Full Ecosystem!"
         }
       }
     },

@@ -1,4 +1,3 @@
-'use client';
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -22,6 +21,7 @@ export const Header: React.FC = () => {
           <a href="#specialties" className="hover:text-neon transition-colors">{t.nav.specialties}</a>
           <a href="#about" className="hover:text-neon transition-colors">{t.nav.about}</a>
           <a href="#projects" className="hover:text-neon transition-colors">{t.nav.projects}</a>
+          <a href="#contact" className="hover:text-neon transition-colors">{t.nav.plans}</a>
         </nav>
 
         {/* Right Side: Flags & CTA */}
@@ -50,8 +50,7 @@ export const Header: React.FC = () => {
             </span>
           </div>
           <a 
-            href="https://wa.me/5588993519649?text=Ol%C3%A1%2C%20vim%20pelo%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20saber%20mais."
-            target='blank' 
+            href="#contact" 
             className="bg-neon text-black font-bold px-6 py-2 rounded-full hover:bg-green-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,230,0,0.6)]"
           >
             {t.nav.contact}
@@ -77,6 +76,7 @@ export const Header: React.FC = () => {
           <a href="#specialties" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.specialties}</a>
           <a href="#about" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
           <a href="#projects" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.projects}</a>
+          <a href="#contact" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.plans}</a>
           <a href="#contact" className="text-neon font-bold mt-2" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
         </div>
       )}

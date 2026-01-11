@@ -1,3 +1,5 @@
+import React from 'react';
+
 export interface Specialty {
   title: string;
   description: string;
