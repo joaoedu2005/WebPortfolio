@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
             <div className="relative w-full h-full hexagon overflow-hidden border-4 border-neon shadow-[0_0_30px_rgba(0,230,0,0.5)]">
                {/* Updated with foto_editada.png */}
               <img 
-                src="fotominha.jpg" 
+                src="/fotominha.jpg" 
                 alt="João Eduardo" 
                 className="w-full h-full object-cover"
               />

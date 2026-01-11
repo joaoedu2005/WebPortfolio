@@ -15,7 +15,7 @@ export const About: React.FC = () => {
           <div className="relative max-w-md mx-auto transform -rotate-2 hover:rotate-0 transition-transform duration-500">
              {/* Updated with minhafotosescomp.jpg */}
             <img 
-              src="minhafotosescomp.jpg" 
+              src="/minhafotosescomp.jpg" 
               alt="João Eduardo" 
               className="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500 border border-white/10"
             />

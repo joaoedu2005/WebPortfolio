@@ -15,7 +15,7 @@ export const Portfolio: React.FC = () => {
       id: 'maxconsult',
       title: 'MaxConsult',
       category: t.portfolio.categories.solar,
-      imageUrl: 'maxconsult_full.png', 
+      imageUrl: '/maxconsult_full.png', 
       featured: true,
       scrollEffect: true
     },
@@ -23,21 +23,21 @@ export const Portfolio: React.FC = () => {
       id: 'craft',
       title: 'Centro de Artesanato',
       category: t.portfolio.categories.ecommerce,
-      imageUrl: 'artesanato_full.png', 
+      imageUrl: '/artesanato_full.png', 
       scrollEffect: true
     },
     {
       id: 'unimed',
       title: 'Unimed Concept',
       category: t.portfolio.categories.health,
-      imageUrl: 'Unimed_LandingPage_Tela_Inteira1.png', 
+      imageUrl: '/Unimed_LandingPage_Tela_Inteira1.png', 
       scrollEffect: true
     },
     {
       id: 'n8n',
       title: 'Chatbot para Whatsapp',
       category: t.portfolio.categories.automation,
-      imageUrl: 'whatsappchatbot.jpeg',
+      imageUrl: '/whatsappchatbot.jpeg',
       scrollEffect: true // Keeping original zoom effect
     }
   ];
