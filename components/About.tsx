@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Instagram, Linkedin, Github } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -25,7 +24,7 @@ export const About: React.FC = () => {
         {/* Text */}
         <div className="flex-1 space-y-6">
           <h2 className="text-3xl font-bold">
-            {t.about.prefix},<br />
+            {t.about.prefix}<br />
             <span className="text-neon">{t.about.title}</span>
           </h2>
           

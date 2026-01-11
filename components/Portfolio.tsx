@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Project } from '../types';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -15,7 +14,7 @@ export const Portfolio: React.FC = () => {
       id: 'maxconsult',
       title: 'MaxConsult',
       category: t.portfolio.categories.solar,
-      imageUrl: '/maxconsult_full.png', 
+      imageUrl: 'maxconsult_full.png', 
       featured: true,
       scrollEffect: true
     },
@@ -23,14 +22,14 @@ export const Portfolio: React.FC = () => {
       id: 'craft',
       title: 'Centro de Artesanato',
       category: t.portfolio.categories.ecommerce,
-      imageUrl: '/artesanato_full.png', 
+      imageUrl: 'artesanato_full.png', 
       scrollEffect: true
     },
     {
       id: 'unimed',
       title: 'Unimed Concept',
       category: t.portfolio.categories.health,
-      imageUrl: '/Unimed_LandingPage_Tela_Inteira1.png', 
+      imageUrl: '/unimed_full.png', 
       scrollEffect: true
     },
     {
@@ -38,7 +37,7 @@ export const Portfolio: React.FC = () => {
       title: 'Chatbot para Whatsapp',
       category: t.portfolio.categories.automation,
       imageUrl: '/whatsappchatbot.jpeg',
-      scrollEffect: true // Keeping original zoom effect
+      scrollEffect: true
     }
   ];
 

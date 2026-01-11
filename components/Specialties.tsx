@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Code2, Settings, Bot, Palette, TrendingUp } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
@@ -43,7 +42,7 @@ export const Specialties: React.FC = () => {
 
         <div className="flex flex-wrap justify-center gap-8">
           {specialtiesData.map((item, index) => (
-            <div key={index} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)]  min-w-[280px] bg-transparent p-6 rounded-lg group hover:bg-cardbg transition-colors duration-300 border border-transparent hover:border-white/10 flex flex-col">
+            <div key={index} className="w-full md:w-[calc(50%-2rem)] lg:w-[calc(33.33%-2rem)] min-w-[280px] bg-transparent p-6 rounded-lg group hover:bg-cardbg transition-colors duration-300 border border-transparent hover:border-white/10 flex flex-col">
               <div className="mb-6">
                 <item.icon className="w-12 h-12 text-neon stroke-[1.5]" />
               </div>
