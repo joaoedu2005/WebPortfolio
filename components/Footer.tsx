@@ -11,7 +11,6 @@ export const Footer: React.FC = () => {
         
         {/* Logo */}
         <div className="flex flex-col leading-none">
-          <span className="text-gray-500 text-xs tracking-widest uppercase">agência</span>
           <span className="text-neon font-black text-xl tracking-tighter">JEOG</span>
         </div>
 
