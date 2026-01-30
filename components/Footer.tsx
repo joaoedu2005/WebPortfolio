@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import { Instagram, Linkedin, Github, Mail } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';

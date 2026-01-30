@@ -6,6 +6,12 @@ export interface Specialty {
   icon: React.ElementType;
 }
 
+export interface ProjectDetails {
+  role: string;
+  duration: string;
+  items: string[];
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -13,4 +19,5 @@ export interface Project {
   imageUrl: string;
   featured?: boolean;
   scrollEffect?: boolean;
+  details?: ProjectDetails;
 }

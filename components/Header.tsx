@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
       <div className="container mx-auto px-6 flex justify-between items-center">
         {/* Logo */}
         <div className="flex flex-col leading-none">
-          <span className="text-gray-400 text-xs tracking-widest uppercase">agência</span>
+          <span className="text-gray-400 text-xs tracking-widest uppercase">Portfolio</span>
           <span className="text-neon font-black text-2xl tracking-tighter">JEOG</span>
         </div>
 
@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
           <a href="#specialties" className="hover:text-neon transition-colors">{t.nav.specialties}</a>
           <a href="#about" className="hover:text-neon transition-colors">{t.nav.about}</a>
           <a href="#projects" className="hover:text-neon transition-colors">{t.nav.projects}</a>
-          <a href="#contact" className="hover:text-neon transition-colors">{t.nav.plans}</a>
+          <a href="#stack" className="hover:text-neon transition-colors">{t.nav.stack}</a>
         </nav>
 
         {/* Right Side: Flags & CTA */}
@@ -50,8 +50,9 @@ export const Header: React.FC = () => {
             </span>
           </div>
           <a 
-            href="#contact" 
-            className="bg-neon text-black font-bold px-6 py-2 rounded-full hover:bg-green-400 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,230,0,0.6)]"
+            href="http://wa.me/5588993519649"
+            target='blank' 
+            className="bg-white text-black font-bold px-6 py-2 rounded-full hover:bg-neon transition-all duration-300"
           >
             {t.nav.contact}
           </a>
@@ -76,7 +77,7 @@ export const Header: React.FC = () => {
           <a href="#specialties" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.specialties}</a>
           <a href="#about" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.about}</a>
           <a href="#projects" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.projects}</a>
-          <a href="#contact" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.plans}</a>
+          <a href="#stack" className="text-white hover:text-neon" onClick={() => setIsMenuOpen(false)}>{t.nav.stack}</a>
           <a href="#contact" className="text-neon font-bold mt-2" onClick={() => setIsMenuOpen(false)}>{t.nav.contact}</a>
         </div>
       )}

@@ -8,24 +8,25 @@ interface Translations {
     specialties: string;
     about: string;
     projects: string;
-    plans: string;
+    stack: string;
     contact: string;
   };
   hero: {
+    role: string;
     title: string;
     subtitle: string;
     description: string;
     cta: string;
+    downloadCv: string;
   };
   specialties: {
     prefix: string;
     heading: string;
     items: {
-      id: { title: string; description: string };
-      web: { title: string; description: string };
-      ads: { title: string; description: string };
+      arch: { title: string; description: string };
       qa: { title: string; description: string };
-      auto: { title: string; description: string };
+      agile: { title: string; description: string };
+      ai: { title: string; description: string };
     };
   };
   about: {
@@ -39,55 +40,57 @@ interface Translations {
     prefix: string;
     heading: string;
     categories: {
-        solar: string;
-        ecommerce: string;
         health: string;
         automation: string;
+        ecommerce: string;
+    };
+    projects: {
+        vitta: { 
+          title: string; 
+          desc: string;
+          details: {
+            role: string;
+            duration: string;
+            items: string[];
+          }
+        };
+        sim: { 
+          title: string; 
+          desc: string; 
+          details: {
+            role: string;
+            duration: string;
+            items: string[];
+          }
+        };
+        craft: { 
+          title: string; 
+          desc: string; 
+          details: {
+            role: string;
+            duration: string;
+            items: string[];
+          }
+        };
+    }
+  };
+  stack: {
+    prefix: string;
+    heading: string;
+    categories: {
+        frontend: string;
+        backend: string;
+        qa: string;
+        tools: string;
     }
   };
   contact: {
-    ctaTitle: string;
-    ctaSubtitle: string;
-    introTitle: string;
-    introText: string;
-    plans: {
-        start: {
-            tag: string;
-            title: string;
-            subtitle: string;
-            price: string;
-            features: string[];
-            button: string;
-            message: string;
-        };
-        combo: {
-            tag: string;
-            title: string;
-            subtitle: string;
-            price: string;
-            features: string[];
-            button: string;
-            message: string;
-        };
-        scale: {
-            tag: string;
-            title: string;
-            subtitle: string;
-            price: string;
-            features: string[];
-            button: string;
-            message: string;
-        };
-        custom: {
-            tag: string;
-            title: string;
-            subtitle: string;
-            price: string;
-            features: string[];
-            button: string;
-            message: string;
-        };
-    }
+    title: string;
+    subtitle: string;
+    text: string;
+    email: string;
+    linkedin: string;
+    cta: string;
   };
   footer: {
     rights: string;
@@ -96,251 +99,284 @@ interface Translations {
 
 const translationsData: Record<Language, Translations> = {
   PT: {
-    nav: { home: "Início", specialties: "Especialidades", about: "Sobre", projects: "Projetos", plans: "Planos", contact: "Contato" },
+    nav: { home: "Início", specialties: "Competências", about: "Resumo", projects: "Experiência", stack: "Tech Stack", contact: "Contato" },
     hero: {
-      title: "Design Único.",
-      subtitle: "Resultados Reais.",
-      description: "Do visual à venda: Crio Identidades Visuais marcantes, desenvolvo Landing Pages de alta conversão e gerencio Tráfego Pago para escalar seu negócio. Tudo isso com automação inteligente e qualidade absoluta.",
-      cta: "Entre em contato"
+      role: "Software Engineer | Full-Stack | QA",
+      title: "Arquitetura Robusta.",
+      subtitle: "Qualidade Escalável.",
+      description: "Desenvolvedor Full-Stack e QA especialista em identificar problemas de arquitetura antes que se tornem críticos. Foco total no ciclo de vida do produto, da regra de negócio à experiência do usuário.",
+      cta: "Ver Projetos",
+      downloadCv: "Baixar Currículo"
     },
     specialties: {
       prefix: "MINHAS",
-      heading: "ESPECIALIDADES",
+      heading: "COMPETÊNCIAS",
       items: {
-        id: { title: "Designer de Identidade Visual", description: "Crio identidades visuais marcantes que se conectam diretamente com a criação de Landing Pages de alta conversão. Unifico o design da marca com a estratégia web." },
-        web: { title: "Web Developer", description: "Transformo ideias em realidade com Landing Pages rápidas, responsivas e otimizadas para converter visitantes em clientes." },
-        ads: { title: "Tráfego Pago", description: "Gestão estratégica de campanhas (Google Ads e Meta Ads) para alavancar a visibilidade da sua marca, atrair o público qualificado e aumentar suas vendas." },
-        qa: { title: "Quality Assurance", description: "Garanto que tudo funcione perfeitamente com testes manuais e automatizados (Cypress, Postman), prevenindo erros antes que seu cliente os veja." },
-        auto: { title: "Automação de Tarefas", description: "Crio workflows inteligentes com n8n e IA para automatizar processos repetitivos, economizando seu tempo e aumentando a eficiência." }
+        arch: { title: "Arquitetura & Clean Code", description: "Foco em aplicações escaláveis e modulares. Documentação de requisitos e modelagem desde o início para evitar retrabalho." },
+        qa: { title: "Quality Assurance (QA)", description: "Aplicação de Shift Left Testing. Testes manuais e automatizados com Cypress e Postman para garantir software livre de bugs." },
+        agile: { title: "Metodologias Ágeis", description: "Vivência consolidada em SCRUM e Kanban. Condução de reuniões com stakeholders para alinhamento total de expectativas." },
+        ai: { title: "Automação & IA", description: "Uso estratégico de IA (RAG, n8n) para otimizar processos, desde geração de cenários de teste até automação de workflows complexos." }
       },
     },
     about: {
-      prefix: "MUITO PRAZER,",
-      title: "SOU JOÃO EDUARDO.",
-      p1: "Sou um parceiro completo para o seu crescimento digital. Começo criando uma Identidade Visual forte, desenvolvo sua Landing Page de alta performance e trago os clientes certos através de Tráfego Pago estratégico.",
-      p2: "Minha obsessão por qualidade (QA) e eficiência (Automação com IA) garante que sua operação rode macia, sem falhas e com o máximo de resultados.",
-      p3: "Se você quer alguém que cuide da imagem, da tecnologia e da atração de clientes do seu negócio, vamos conversar!"
+      prefix: "SOBRE MIM",
+      title: "JOÃO EDUARDO GIRÃO",
+      p1: "Meu diferencial está em me preocupar com todo o ciclo de vida do produto. Não basta a aplicação funcionar; ela precisa ser escalável, manutenível e resolver o problema certo.",
+      p2: "Estudo profundamente as regras de negócio e tenho habilidade comprovada em elicitar requisitos. Trabalho com Next.js, Nest.js e arquiteturas modernas, sempre aplicando boas práticas de QA.",
+      p3: "Atualmente busco oportunidades onde possa aplicar minha experiência em QA, desenvolvimento e automação para resolver problemas reais em ambientes desafiadores."
     },
     portfolio: {
-      prefix: "MEU",
-      heading: "PORTFÓLIO",
-      categories: { solar: "Landing Page | Energia Solar", ecommerce: "E-commerce", health: "Saúde", automation: "Automação" }
-    },
-    contact: {
-      ctaTitle: "PARE DE PERDER",
-      ctaSubtitle: "DINHEIRO HOJE.",
-      introTitle: "O Custo da Invisibilidade",
-      introText: "Você sabe que seu produto é bom, mas seu cliente não te acha. Agências cobram fortunas e levam 30 dias para entregar o básico. Aqui você tem velocidade, qualidade e opções que cabem no seu momento.",
-      plans: {
-        start: {
-            tag: "ENTRADA",
-            title: "LANDING PAGE",
-            subtitle: "Saia do Amadorismo",
-            price: "R$ 697,90",
-            features: ["Landing Page de Alta Conversão", "Design focado em Vendas", "Entrega Rápida", "Ideal para validar oferta"],
-            button: "QUERO VENDER",
-            message: "Olá, quero a Landing Page de R$ 697,90!"
+      prefix: "MINHA",
+      heading: "EXPERIÊNCIA",
+      categories: { health: "HealthTech", automation: "GovTech / AI", ecommerce: "E-commerce" },
+      projects: {
+        vitta: { 
+          title: "Plataforma VittaHub", 
+          desc: "Plataforma de saúde robusta para gestão de clínicas e especialistas.", 
+          details: {
+            role: "Desenvolvedor Front-end",
+            duration: "Out 2025 - Presente",
+            items: [
+              "Criação de interface de alta performance para sistema de saúde.",
+              "Arquitetura modular e escalável com Next.js, TypeScript e TailwindCSS.",
+              "Desenvolvimento de biblioteca de componentes reutilizáveis (cards, modais, toasters).",
+              "Integração de APIs REST para exibição dinâmica de dados.",
+              "Documentação de demandas no Jira e versionamento com Git/Github."
+            ]
+          }
         },
-        combo: {
-            tag: "MELHOR CUSTO-BENEFÍCIO",
-            title: "BRANDING + WEB",
-            subtitle: "Profissionalize sua Marca",
-            price: "A partir de R$ 897,90",
-            features: ["Tudo do plano anterior", "Criação de Identidade Visual", "Logo e Manual da Marca", "Design Coerente e Forte"],
-            button: "QUERO O COMBO",
-            message: "Olá, me interessei pelo Combo de Branding + Landing Page!"
+        sim: { 
+          title: "Chatbot SIM (IA)", 
+          desc: "Sistema de RAG que reduziu 80% da carga operacional.", 
+          details: {
+            role: "Engenheiro de Automação",
+            duration: "Set 2025 - Set 2025",
+            items: [
+              "Automatização de atendimento público 24/7 para Serviço de Inspeção Municipal.",
+              "Implementação de RAG consumindo API do Google Drive (81 pgs de docs, 600+ artigos).",
+              "Desenvolvimento de workflows complexos no n8n.",
+              "Deploy em VPS Hostinger utilizando Redis para gestão de sessões.",
+              "Redução de 80% no tempo gasto com dúvidas frequentes e 95% de uptime."
+            ]
+          }
         },
-        custom: {
-            tag: "FLEXÍVEL",
-            title: "PERSONALIZADO",
-            subtitle: "Do Seu Jeito",
-            price: "A combinar",
-            features: [
-              "Escolha os serviços a seu gosto",
-              "Criação de Landing Page (Página na Web)",
-              "Criação de Identidade Visual (ou Rebranding)",
-              "Tráfego Pago (Aumentar sua visibilidade e seus clientes)",
-              "Chatbot com IA (Automatize seu Whatsapp ou Instagram)"
-            ],
-            button: "MONTAR PACOTE",
-            message: "Olá, gostaria de montar um pacote personalizado."
-        },
-        scale: {
-            tag: "COMPLETO",
-            title: "ECOSSISTEMA",
-            subtitle: "Dominação de Mercado",
-            price: "A partir de R$ 2.499,90",
-            features: ["Identidade Visual Completa", "LP Premium", "Tráfego Pago (Ads)", "Chatbot com IA"],
-            button: "DOMINAR MERCADO",
-            message: "Olá, estou pronto para o Ecossistema Completo!"
+        craft: { 
+          title: "Centro de Artesanato", 
+          desc: "Plataforma completa de vendas para artesãs locais.", 
+          details: {
+            role: "Analista de Sistemas",
+            duration: "Mar 2025 - Ago 2025",
+            items: [
+              "Desenvolvimento de sistema web para auxiliar artesãs na divulgação e venda.",
+              "Elicitação, documentação e validação de requisitos.",
+              "Desenvolvimento de protótipo de alta fidelidade no Figma.",
+              "Produção de páginas funcionais com Next.js e TailwindCSS.",
+              "Testes de funcionalidade (QA) unitários e automatizados com Cypress."
+            ]
+          }
         }
       }
+    },
+    stack: {
+      prefix: "MINHA",
+      heading: "STACK TECNOLÓGICA",
+      categories: { frontend: "Front-end", backend: "Back-end", qa: "QA & Testes", tools: "DevOps & Ferramentas" }
+    },
+    contact: {
+      title: "VAMOS CONSTRUIR",
+      subtitle: "ALGO SÓLIDO.",
+      text: "Estou disponível para novos desafios em Engenharia de Software e QA. Vamos conversar sobre como posso contribuir para o seu time.",
+      email: "joaoeduardogirao@gmail.com",
+      linkedin: "linkedin.com/in/joaoedugirao",
+      cta: "Entrar em contato"
     },
     footer: { rights: "Todos os direitos reservados." }
   },
   ES: {
-    nav: { home: "Inicio", specialties: "Especialidades", about: "Sobre Mí", projects: "Proyectos", plans: "Planes", contact: "Contacto" },
+    nav: { home: "Inicio", specialties: "Competencias", about: "Resumen", projects: "Experiencia", stack: "Tech Stack", contact: "Contacto" },
     hero: {
-      title: "Diseño Único.",
-      subtitle: "Resultados Reales.",
-      description: "Del diseño a la venta: Creo Identidades Visuales impactantes, desarrollo Landing Pages de alta conversión y gestiono Tráfico Pago para escalar tu negocio. Todo con automatización inteligente y calidad absoluta.",
-      cta: "Ponerse en contacto"
+      role: "Software Engineer | Full-Stack | QA",
+      title: "Arquitectura Robusta.",
+      subtitle: "Calidad Escalable.",
+      description: "Desarrollador Full-Stack y QA especialista en identificar problemas de arquitectura antes de que sean críticos. Enfoque total en el ciclo de vida del producto.",
+      cta: "Ver Proyectos",
+      downloadCv: "Descargar CV"
     },
     specialties: {
       prefix: "MIS",
-      heading: "ESPECIALIDADES",
+      heading: "COMPETENCIAS",
       items: {
-        id: { title: "Diseñador de Identidad Visual", description: "Creo identidades visuales impactantes que se conectan directamente con la creación de Landing Pages de alta conversión." },
-        web: { title: "Desarrollador Web", description: "Transformo ideas en realidad con Landing Pages rápidas, responsivas y optimizadas para convertir visitantes en clientes." },
-        ads: { title: "Tráfico Pago", description: "Gestión estratégica de campañas (Google/Meta Ads) para aumentar la visibilidad, atraer al público calificado e impulsar tus ventas." },
-        qa: { title: "Aseguramiento de Calidad", description: "Garantizo que todo funcione perfectamente con pruebas manuales y automatizadas, previniendo errores antes de que tu cliente los vea." },
-        auto: { title: "Automatización de Tareas", description: "Creo flujos de trabajo inteligentes con n8n e IA para automatizar procesos repetitivos, ahorrando tiempo y aumentando la eficiencia." }
+        arch: { title: "Arquitectura & Clean Code", description: "Enfoque en aplicaciones escalables y modulares. Documentación de requisitos y modelado desde el inicio." },
+        qa: { title: "Quality Assurance (QA)", description: "Aplicación de Shift Left Testing. Pruebas manuales y automatizadas con Cypress y Postman." },
+        agile: { title: "Metodologías Ágiles", description: "Experiencia consolidada en SCRUM y Kanban. Conducción de reuniones con stakeholders para alineación total." },
+        ai: { title: "Automatización & IA", description: "Uso estratégico de IA (RAG, n8n) para optimizar procesos y flujos de trabajo complejos." }
       }
     },
     about: {
-      prefix: "MUCHO GUSTO,",
-      title: "SOY JOÃO EDUARDO.",
-      p1: "Soy un socio completo para tu crecimiento digital. Comienzo creando una Identidad Visual fuerte, desarrollo tu Landing Page de alto rendimiento y traigo a los clientes correctos a través de Tráfico Pago estratégico.",
-      p2: "Mi obsesión por la calidad (QA) y la eficiencia (Automatización con IA) garantiza que tu operación funcione sin problemas y con el máximo de resultados.",
-      p3: "Si buscas a alguien que cuide de la imagen, la tecnología y la atracción de clientes de tu negocio, ¡hablemos!"
+      prefix: "SOBRE MÍ",
+      title: "JOÃO EDUARDO GIRÃO",
+      p1: "Mi diferencial está en preocuparme por todo el ciclo de vida del producto. No basta con que la aplicación funcione; debe ser escalable y resolver el problema correcto.",
+      p2: "Estudio profundamente las reglas de negocio. Trabajo con Next.js, Nest.js y arquitecturas modernas, siempre aplicando buenas prácticas de QA.",
+      p3: "Busco oportunidades donde pueda aplicar mi experiencia en QA, desarrollo y automatización en ambientes desafiantes."
     },
     portfolio: {
       prefix: "MI",
-      heading: "PORTAFOLIO",
-      categories: { solar: "Landing Page | Energía Solar", ecommerce: "Comercio Electrónico", health: "Salud", automation: "Automatización" }
-    },
-    contact: {
-      ctaTitle: "DEJA DE PERDER",
-      ctaSubtitle: "DINERO HOY.",
-      introTitle: "El Costo de la Invisibilidad",
-      introText: "Sabes que tu producto es bueno, pero tu cliente no te encuentra. Aquí tienes velocidad, calidad y opciones que se adaptan a tu momento.",
-      plans: {
-        start: {
-            tag: "ENTRADA",
-            title: "LANDING PAGE",
-            subtitle: "Sal del Amateurismo",
-            price: "R$ 697,90",
-            features: ["Landing Page de Alta Conversión", "Diseño enfocado en Ventas", "Entrega Rápida", "Ideal para validar oferta"],
-            button: "QUIERO VENDER",
-            message: "Hola, quiero la Landing Page!"
+      heading: "EXPERIENCIA",
+      categories: { health: "HealthTech", automation: "GovTech / AI", ecommerce: "E-commerce" },
+      projects: {
+        vitta: { 
+          title: "Plataforma VittaHub", 
+          desc: "Plataforma de salud robusta para gestión de clínicas.", 
+          details: {
+            role: "Desarrollador Front-end",
+            duration: "Oct 2025 - Presente",
+            items: [
+              "Creación de interfaz de alto rendimiento para sistema de salud.",
+              "Arquitectura modular y escalable con Next.js, TypeScript y TailwindCSS.",
+              "Desarrollo de biblioteca de componentes reutilizables.",
+              "Integración de APIs REST.",
+              "Gestión con Jira y control de versiones con Git/Github."
+            ]
+          }
         },
-        combo: {
-            tag: "MEJOR VALOR",
-            title: "BRANDING + WEB",
-            subtitle: "Profesionaliza tu Marca",
-            price: "Desde R$ 897,90",
-            features: ["Todo del plan anterior", "Creación de Identidad Visual", "Logo y Manual de Marca", "Diseño Coherente y Fuerte"],
-            button: "QUIERO EL COMBO",
-            message: "Hola, me interesa el Combo de Branding + Landing Page!"
+        sim: { 
+          title: "Chatbot SIM (IA)", 
+          desc: "Sistema RAG que redujo 80% la carga operativa.", 
+          details: {
+            role: "Ingeniero de Automatización",
+            duration: "Sep 2025 - Sep 2025",
+            items: [
+              "Automatización de atención pública 24/7.",
+              "Implementación de RAG consumiendo API de Google Drive.",
+              "Flujos de trabajo complejos en n8n.",
+              "Despliegue en VPS Hostinger con Redis.",
+              "Reducción del 80% en carga operativa y 95% de uptime."
+            ]
+          }
         },
-        custom: {
-            tag: "FLEXIBLE",
-            title: "PERSONALIZADO",
-            subtitle: "A Tu Manera",
-            price: "A convenir",
-            features: [
-              "Elige los servicios a tu gusto",
-              "Creación de Landing Page (Página Web)",
-              "Creación de Identidad Visual (o Rebranding)",
-              "Tráfico Pago (Aumenta tu visibilidad y clientes)",
-              "Chatbot con IA (Automatiza tu WhatsApp o Instagram)"
-            ],
-            button: "ARMAR PAQUETE",
-            message: "Hola, me gustaría armar un paquete personalizado."
-        },
-        scale: {
-            tag: "COMPLETO",
-            title: "ECOSISTEMA",
-            subtitle: "Dominación de Mercado",
-            price: "Desde R$ 2.499,90",
-            features: ["Identidad Visual Completa", "LP Premium", "Tráfico Pago (Ads)", "Chatbot con IA"],
-            button: "DOMINAR MERCADO",
-            message: "Hola, estoy listo para el Ecosistema Completo!"
+        craft: { 
+          title: "Centro de Artesanía", 
+          desc: "Plataforma completa de ventas para artesanos.", 
+          details: {
+            role: "Analista de Sistemas",
+            duration: "Mar 2025 - Ago 2025",
+            items: [
+              "Desarrollo de sistema web para artesanos locales.",
+              "Levantamiento y validación de requisitos.",
+              "Prototipado de alta fidelidad en Figma.",
+              "Desarrollo con Next.js y TailwindCSS.",
+              "Pruebas unitarias y automatizadas con Cypress."
+            ]
+          }
         }
       }
+    },
+    stack: {
+      prefix: "MI",
+      heading: "STACK TECNOLÓGICO",
+      categories: { frontend: "Front-end", backend: "Back-end", qa: "QA & Pruebas", tools: "DevOps & Herramientas" }
+    },
+    contact: {
+      title: "CONSTRUYAMOS",
+      subtitle: "ALGO SÓLIDO.",
+      text: "Estoy disponible para nuevos desafíos en Ingeniería de Software y QA. Hablemos.",
+      email: "joaoeduardogirao@gmail.com",
+      linkedin: "linkedin.com/in/joaoedugirao",
+      cta: "Ponerse en contacto"
     },
     footer: { rights: "Todos los derechos reservados." }
   },
   US: {
-    nav: { home: "Home", specialties: "Specialties", about: "About", projects: "Projects", plans: "Plans", contact: "Contact" },
+    nav: { home: "Home", specialties: "Skills", about: "Summary", projects: "Experience", stack: "Tech Stack", contact: "Contact" },
     hero: {
-      title: "Unique Design.",
-      subtitle: "Real Results.",
-      description: "From visual to sales: I create striking Visual Identities, develop high-conversion Landing Pages, and manage Paid Traffic to scale your business. All with intelligent automation and absolute quality.",
-      cta: "Get in touch"
+      role: "Software Engineer | Full-Stack | QA",
+      title: "Robust Architecture.",
+      subtitle: "Scalable Quality.",
+      description: "Full-Stack Developer and QA specialist in identifying architectural issues before they become critical. Total focus on product lifecycle, from business rules to UX.",
+      cta: "View Projects",
+      downloadCv: "Download CV"
     },
     specialties: {
       prefix: "MY",
-      heading: "SPECIALTIES",
+      heading: "COMPETENCIES",
       items: {
-        id: { title: "Visual Identity Designer", description: "I create striking visual identities that connect directly with the creation of high-conversion Landing Pages." },
-        web: { title: "Web Developer", description: "I transform ideas into reality with fast, responsive Landing Pages optimized to convert visitors into customers." },
-        ads: { title: "Paid Traffic", description: "Strategic campaign management (Google/Meta Ads) to boost visibility, attract the qualified audience, and increase your sales." },
-        qa: { title: "Quality Assurance", description: "I ensure everything runs perfectly with manual and automated tests, preventing errors before your customer sees them." },
-        auto: { title: "Task Automation", description: "I create intelligent workflows with n8n and AI to automate repetitive processes, saving time and increasing efficiency." }
+        arch: { title: "Architecture & Clean Code", description: "Focus on scalable and modular applications. Requirements documentation and modeling to avoid rework." },
+        qa: { title: "Quality Assurance (QA)", description: "Shift Left Testing application. Manual and automated tests with Cypress and Postman to ensure bug-free software." },
+        agile: { title: "Agile Methodologies", description: "Consolidated experience in SCRUM and Kanban. Conducting meetings with stakeholders for total alignment." },
+        ai: { title: "Automation & AI", description: "Strategic use of AI (RAG, n8n) to optimize processes, from generating test scenarios to complex workflow automation." }
       }
     },
     about: {
-      prefix: "NICE TO MEET YOU,",
-      title: "I AM JOÃO EDUARDO.",
-      p1: "I am a complete partner for your digital growth. I start by creating a strong Visual Identity, develop your high-performance Landing Page, and bring the right customers through strategic Paid Traffic.",
-      p2: "My obsession with quality (QA) and efficiency (AI Automation) ensures your operation runs smoothly and with maximum results.",
-      p3: "If you are looking for someone who takes care of image, technology, and customer acquisition for your business, let's talk!"
+      prefix: "ABOUT ME",
+      title: "JOÃO EDUARDO GIRÃO",
+      p1: "My differentiator is caring about the entire product lifecycle. It's not enough for the app to work; it must be scalable, maintainable, and solve the right problem.",
+      p2: "I deeply study business rules and have proven skills in requirements elicitation. I work with Next.js, Nest.js, and modern architectures, always applying QA best practices.",
+      p3: "I am currently looking for opportunities where I can apply my experience in QA, development, and automation to solve real problems."
     },
     portfolio: {
       prefix: "MY",
-      heading: "PORTFOLIO",
-      categories: { solar: "Landing Page | Solar Energy", ecommerce: "E-commerce", health: "Health", automation: "Automation" }
-    },
-    contact: {
-      ctaTitle: "STOP LOSING",
-      ctaSubtitle: "MONEY TODAY.",
-      introTitle: "The Cost of Being Invisible",
-      introText: "You know your product is good, but customers can't find you. Here you have speed, quality, and options that fit your moment.",
-      plans: {
-        start: {
-            tag: "ENTRY",
-            title: "LANDING PAGE",
-            subtitle: "Quit Being an Amateur",
-            price: "$150 USD",
-            features: ["High Conversion Landing Page", "Sales Optimized Design", "Fast Delivery", "Ideal to validate offer"],
-            button: "I WANT TO SELL",
-            message: "Hello, I want the Landing Page!"
+      heading: "EXPERIENCE",
+      categories: { health: "HealthTech", automation: "GovTech / AI", ecommerce: "E-commerce" },
+      projects: {
+        vitta: { 
+          title: "VittaHub Platform", 
+          desc: "Robust health platform for clinic management.", 
+          details: {
+            role: "Frontend Developer",
+            duration: "Oct 2025 - Present",
+            items: [
+              "Created high-performance interface for health systems.",
+              "Modular and scalable architecture with Next.js, TypeScript, and TailwindCSS.",
+              "Developed reusable component library (cards, modals, toasters).",
+              "REST API integration for dynamic data.",
+              "Task management in Jira and versioning with Git/Github."
+            ]
+          }
         },
-        combo: {
-            tag: "BEST VALUE",
-            title: "BRANDING + WEB",
-            subtitle: "Professionalize Your Brand",
-            price: "From $180 USD",
-            features: ["Everything in previous plan", "Visual Identity Creation", "Logo & Brand Manual", "Strong Coherent Design"],
-            button: "I WANT THE COMBO",
-            message: "Hello, I am interested in the Branding + Landing Page Combo!"
+        sim: { 
+          title: "SIM Chatbot (AI)", 
+          desc: "RAG system that reduced operational load by 80%.", 
+          details: {
+            role: "Automation Engineer",
+            duration: "Sep 2025 - Sep 2025",
+            items: [
+              "Automated 24/7 public service for Municipal Inspection Service.",
+              "Implemented RAG consuming Google Drive API (81+ pages, 600+ articles).",
+              "Developed complex workflows in n8n.",
+              "Deployed on Hostinger VPS using Redis for session management.",
+              "80% reduction in operational load and 95% uptime."
+            ]
+          }
         },
-        custom: {
-            tag: "FLEXIBLE",
-            title: "CUSTOM",
-            subtitle: "Your Way",
-            price: "Contact me",
-            features: [
-              "Choose services to your liking",
-              "Landing Page Creation (Web Page)",
-              "Visual Identity Creation (or Rebranding)",
-              "Paid Traffic (Increase visibility and clients)",
-              "AI Chatbot (Automate WhatsApp or Instagram)"
-            ],
-            button: "BUILD PACKAGE",
-            message: "Hello, I would like to build a custom package."
-        },
-        scale: {
-            tag: "FULL",
-            title: "ECOSYSTEM",
-            subtitle: "Market Dominance",
-            price: "From $500 USD",
-            features: ["Complete Visual Identity", "Premium LP", "Paid Traffic (Ads)", "AI Chatbot"],
-            button: "DOMINATE MARKET",
-            message: "Hello, I am ready for the Full Ecosystem!"
+        craft: { 
+          title: "Artisan Center", 
+          desc: "Complete sales platform for local artisans.", 
+          details: {
+            role: "Systems Analyst",
+            duration: "Mar 2025 - Aug 2025",
+            items: [
+              "Developed web system for local artisans sales.",
+              "Requirements elicitation and validation.",
+              "High-fidelity prototyping in Figma.",
+              "Functional page production with Next.js and TailwindCSS.",
+              "Unit and automated functional testing (QA) with Cypress."
+            ]
+          }
         }
       }
+    },
+    stack: {
+      prefix: "MY",
+      heading: "TECH STACK",
+      categories: { frontend: "Front-end", backend: "Back-end", qa: "QA & Testing", tools: "DevOps & Tools" }
+    },
+    contact: {
+      title: "LET'S BUILD",
+      subtitle: "SOMETHING SOLID.",
+      text: "I am available for new challenges in Software Engineering and QA. Let's talk about how I can contribute to your team.",
+      email: "joaoeduardogirao@gmail.com",
+      linkedin: "linkedin.com/in/joaoedugirao",
+      cta: "Get in touch"
     },
     footer: { rights: "All rights reserved." }
   }
