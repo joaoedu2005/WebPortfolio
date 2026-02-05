@@ -30,7 +30,7 @@ export const Hero: React.FC = () => {
             </a>
 
             <a 
-              href="/cv_joao_eduardo.pdf"
+              href="https://drive.google.com/file/d/15JCdWC2GOIaBWBf2A9pRptG0v2vLYmLM/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 border border-white/20 text-white font-bold px-8 py-3 rounded-full hover:bg-white/10 hover:border-neon/50 transition-all duration-300"
