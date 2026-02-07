@@ -134,13 +134,14 @@ const translationsData: Record<Language, Translations> = {
           title: "Plataforma VittaHub", 
           desc: "Plataforma de saúde robusta para gestão de clínicas e especialistas.", 
           details: {
-            role: "Desenvolvedor Front-end",
-            duration: "Out 2025 - Presente",
+            role: "Desenvolvedor Front-end (atuação com QA)",
+            duration: "Out 2025 - Mar 2026",
             items: [
-              "Criação de interface de alta performance para sistema de saúde.",
+              "Executei testes funcionais em novas features.",
               "Arquitetura modular e escalável com Next.js, TypeScript e TailwindCSS.",
               "Desenvolvimento de biblioteca de componentes reutilizáveis (cards, modais, toasters).",
               "Integração de APIs REST para exibição dinâmica de dados.",
+              "Melhorei a qualidade das entregas ao validar integrações via API REST.", 
               "Documentação de demandas no Jira e versionamento com Git/Github."
             ]
           }
@@ -164,13 +165,13 @@ const translationsData: Record<Language, Translations> = {
           title: "Centro de Artesanato", 
           desc: "Plataforma completa de vendas para artesãs locais.", 
           details: {
-            role: "Analista de Sistemas",
+            role: "Desenvolvedor (QA Focused)",
             duration: "Mar 2025 - Ago 2025",
             items: [
               "Desenvolvimento de sistema web para auxiliar artesãs na divulgação e venda.",
               "Elicitação, documentação e validação de requisitos.",
               "Desenvolvimento de protótipo de alta fidelidade no Figma.",
-              "Produção de páginas funcionais com Next.js e TailwindCSS.",
+              "Validei regras de negócio desde o início do desenvolvimento",
               "Testes de funcionalidade (QA) unitários e automatizados com Cypress."
             ]
           }
@@ -228,13 +229,14 @@ const translationsData: Record<Language, Translations> = {
           title: "Plataforma VittaHub", 
           desc: "Plataforma de salud robusta para gestión de clínicas.", 
           details: {
-            role: "Desarrollador Front-end",
-            duration: "Oct 2025 - Presente",
+            role: "Desarrollador Front-end (Actuando en control de calidad)",
+            duration: "Oct 2025 - Mar 2026",
             items: [
-              "Creación de interfaz de alto rendimiento para sistema de salud.",
+              "Realicé pruebas funcionales en nuevas funciones.",
               "Arquitectura modular y escalable con Next.js, TypeScript y TailwindCSS.",
               "Desarrollo de biblioteca de componentes reutilizables.",
               "Integración de APIs REST.",
+              "Mejoré la calidad de las entregas validando las integraciones a través de la API REST.",
               "Gestión con Jira y control de versiones con Git/Github."
             ]
           }
@@ -258,13 +260,13 @@ const translationsData: Record<Language, Translations> = {
           title: "Centro de Artesanía", 
           desc: "Plataforma completa de ventas para artesanos.", 
           details: {
-            role: "Analista de Sistemas",
+            role: "Desarollador (QA Focused)",
             duration: "Mar 2025 - Ago 2025",
             items: [
               "Desarrollo de sistema web para artesanos locales.",
               "Levantamiento y validación de requisitos.",
               "Prototipado de alta fidelidad en Figma.",
-              "Desarrollo con Next.js y TailwindCSS.",
+              "Validé las reglas de negocio desde el inicio del desarrollo",
               "Pruebas unitarias y automatizadas con Cypress."
             ]
           }
@@ -322,13 +324,14 @@ const translationsData: Record<Language, Translations> = {
           title: "VittaHub Platform", 
           desc: "Robust health platform for clinic management.", 
           details: {
-            role: "Frontend Developer",
-            duration: "Oct 2025 - Present",
+            role: "Frontend Developer (Acting with QA)",
+            duration: "Oct 2025 - Mar 2026",
             items: [
-              "Created high-performance interface for health systems.",
+              "Executed functional tests in new features",
               "Modular and scalable architecture with Next.js, TypeScript, and TailwindCSS.",
               "Developed reusable component library (cards, modals, toasters).",
               "REST API integration for dynamic data.",
+              "I improved the quality of tasks deliveries by validating integrations via REST API.",
               "Task management in Jira and versioning with Git/Github."
             ]
           }
@@ -352,13 +355,13 @@ const translationsData: Record<Language, Translations> = {
           title: "Artisan Center", 
           desc: "Complete sales platform for local artisans.", 
           details: {
-            role: "Systems Analyst",
+            role: "Developer (QA Focused)",
             duration: "Mar 2025 - Aug 2025",
             items: [
               "Developed web system for local artisans sales.",
               "Requirements elicitation and validation.",
               "High-fidelity prototyping in Figma.",
-              "Functional page production with Next.js and TailwindCSS.",
+              "I validated business rules from the beginning of development",
               "Unit and automated functional testing (QA) with Cypress."
             ]
           }
